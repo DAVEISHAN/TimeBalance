@@ -1,0 +1,5 @@
+path_folder = 'paths_dir/'
+ucf_class_mapping = 'action_classes.json'
+hmdb_mapping = 'hmdb_class_ind.json'
+saved_models_dir = 'saved_models'
+logs = 'logs/'
