@@ -340,15 +340,15 @@ def train_classifier(run_id, restart, saved_model, linear, params, devices):
 if __name__ == '__main__':
     import argparse, importlib
 
-    parser1 = argparse.ArgumentParser(description='Script to do linear evaluation ')
+    parser1 = argparse.ArgumentParser(description='Script to do self-supervised pretraining of teachers or student')
 
-    parser1.add_argument("--run_id", dest='run_id', type=str, required=False, default= "dummy_linear",
+    parser1.add_argument("--run_id", dest='run_id', type=str, required=False, default= "dummy",
                         help='run_id')
     parser1.add_argument("--restart", action='store_true')
     parser1.add_argument("--saved_model", dest='saved_model', type=str, required=False, default= None,
                         help='run_id')
     parser1.add_argument("--linear", action='store_true')
-    parser1.add_argument("--config", dest='config_file_location', type=str, required=True, default= "parameters_BL",
+    parser1.add_argument("--config", dest='config_file_location', type=str, required=True, default= "conf_ssl",
                         help='config_file_location')
     parser1.add_argument("--devices", dest='devices', action='append', type =int, required=False, default=None,
                         help='devices should be a list even when it is single')
